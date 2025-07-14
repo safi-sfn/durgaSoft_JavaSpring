@@ -1,0 +1,78 @@
+# Compiled class files
+*.class
+*.war
+*.ear
+
+# Eclipse/STS files
+.classpath
+.project
+.settings/
+bin/
+
+
+# Maven/Gradle
+target/
+build/
+.gradle/
+.mvn/
+mvnw
+mvnw.cmd
+gradlew
+gradlew.bat
+
+# Log files
+*.log
+logs/
+
+# Dependency directories
+**/lib/
+**/libs/
+
+# Package Files
+*.jar
+*.zip
+*.tar.gz
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+*.properties
+
+# Application specific files
+/src/main/resources/application*.properties
+/src/main/resources/application*.yml
+
+# Test output
+/test-output/
+
+# Temp files
+*.tmp
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# VS Code
+.vscode/
+
+# MacOS
+**/.DS_Store
+
+# Windows
+Thumbs.db
+
+# Spring Boot
+spring-boot-devtools.properties
+
+# Flyway
+/flyway-*
+
+# Lombok
+lombok.config
