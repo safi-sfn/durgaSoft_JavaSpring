@@ -3,4 +3,21 @@
   <groupId>com.safi.coreSpring</groupId>
   <artifactId>app01</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	
+  	   <!-- Spring Core (Mandatory for @Configuration) -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>6.1.5</version> 
+    </dependency>
+	
+	<!-- Spring Context (Provides @Configuration, @Bean, etc.) -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>6.1.5</version> 
+    </dependency>
+  	
+  </dependencies>
 </project>
