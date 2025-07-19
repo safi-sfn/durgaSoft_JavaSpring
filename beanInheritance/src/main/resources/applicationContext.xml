@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+  			<bean id="wishBean" class="bean.WishBean">
+  				<property name="name" value="Durga"/>
+  				<property name="message" value="Have a greate day"/>
+  			</bean>
+  			
+  			
+  			<bean id="welcomeBean" class="bean.WelcomeBean" parent="wishBean">
+  				
+  				<property name="message" value="Welcome to DurgaSoftware"/>
+  			</bean>
+  			
+  			
+  			<bean id="helloBean" class="bean.HelloBean" parent="wishBean">
+  				
+  				<property name="message" value="Good Morning"/>
+  			</bean>
+ </beans>
