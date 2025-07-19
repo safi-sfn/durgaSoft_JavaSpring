@@ -9,6 +9,7 @@
        <context:annotation-config/>                    
      <bean id="helloBean" class="bean.HelloBean">
      <!-- <bean id="helloBean" class="bean.HelloBean" init-method="init" destroy-method="destroy">  -->
+        
         <!--  	
      	<property name="name" value="Durga"></property>
      	<property name="message" value="Good Morning"></property>
