@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
   			
+  			
+  			<!-- If abstract defined bean jvaa class is deleted then this also work -->
   			<bean id="wishBean" abstract="true">
   				<property name="name" value="Durga"/>
   				<property name="message" value="Have a greate day"/>
