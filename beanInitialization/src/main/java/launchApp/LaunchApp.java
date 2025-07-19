@@ -11,6 +11,7 @@ import bean.HelloBean;
  * 2. through user define init() 
  * 
  * I. By using InitializingBean and DisposableBean callback Interface
+ * II. By using @PostConstruct and @PreDestroy annotations.
  */
 
 public class LaunchApp {
