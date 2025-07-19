@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="empBean" class="beans.Employee">
+		<property name="eId" value="E-111"></property>
+		<property name="eName" value="Durga"></property>
+		<property name="eSal" value="5000"></property>
+		<property name="eAddr" value="HYD"></property>
+
+		<property name="acc">
+			<bean id="account" class="beans.Account">
+				<property name="accNo" value="xyz123"></property>
+				<property name="accName" value="Durga"></property>
+				<property name="accType" value="Savings"></property>
+				<property name="balance" value="50000"></property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>
