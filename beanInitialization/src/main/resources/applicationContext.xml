@@ -4,10 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
                            
-     <bean id="helloBean" class="bean.HelloBean" init-method="init" destroy-method="destroy">
+     <bean id="helloBean" class="bean.HelloBean">
+     <!-- <bean id="helloBean" class="bean.HelloBean" init-method="init" destroy-method="destroy">  -->
         <!--  	
      	<property name="name" value="Durga"></property>
      	<property name="message" value="Good Morning"></property>
-     	-->
+     	 --> 
      </bean>         
 </beans>
