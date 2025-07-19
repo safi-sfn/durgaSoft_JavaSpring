@@ -12,6 +12,12 @@ import bean.HelloBean;
  * 
  * I. By using InitializingBean and DisposableBean callback Interface
  * II. By using @PostConstruct and @PreDestroy annotations.
+ * 
+ * 
+ * order of Explicit Initialization
+ *   1. Initializing Bean through @PostConstruct
+ *   2. Initializing Bean through afterPropertiesSet() from InitializingBean
+ *   3. Initializing Bean through custom init() method
  */
 
 public class LaunchApp {
