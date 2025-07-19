@@ -2,8 +2,10 @@ package bean;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class HelloBean implements InitializingBean,DisposableBean {
+public class HelloBean  {
 	
 	private String name;
 	private String message;
@@ -39,7 +41,7 @@ public class HelloBean implements InitializingBean,DisposableBean {
 	}
 	*/
 
-
+/*
 	@Override
 	public void afterPropertiesSet() throws Exception {
 		
@@ -56,6 +58,23 @@ public class HelloBean implements InitializingBean,DisposableBean {
 		System.out.println("destroy() method");
 		
 	}
+*/  
+	@PostConstruct
+	public void initializeBean() {
+		System.out.println("Initialization through PostConstruct annotation");
+		name="Rahul";
+		message="Good Morning";
+	}
+	
+	public String sayHello() {
+		return "Hello "+name+", "+message;
+	}
+	
+	@PreDestroy
+	public void destroyBean() {
+		System.out.println("Bean Deinstantiation through PostDestroy annotation");
+	}
+	
 
 	
 }
