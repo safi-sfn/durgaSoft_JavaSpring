@@ -9,6 +9,8 @@ import bean.HelloBean;
  * there is two way to initialize bean object
  * 1. through property tag in bean configuration that is through setters method
  * 2. through user define init() 
+ * 
+ * I. By using InitializingBean and DisposableBean callback Interface
  */
 
 public class LaunchApp {
