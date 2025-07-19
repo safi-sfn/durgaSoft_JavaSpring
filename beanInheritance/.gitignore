@@ -1,0 +1,10 @@
+/target/
+# Eclipse files
+.settings/
+.classpath
+.project
+*.launch
+
+# IDE specific files (shown in your screenshot)
+org.ecclipse.jdt.core.prefs
+org.ecclipse.m2e.core.prefs
