@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
   			
-  			<bean id="wishBean" class="bean.WishBean" abstract="true">
+  			<bean id="wishBean" abstract="true">
   				<property name="name" value="Durga"/>
   				<property name="message" value="Have a greate day"/>
   			</bean>
