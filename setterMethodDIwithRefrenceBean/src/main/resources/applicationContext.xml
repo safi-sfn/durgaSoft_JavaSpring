@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addressBean" class="beans.Address">
+		<property name="pinCode" value="879647"></property>
+		<property name="street" value="MGRaod"></property>
+		<property name="city" value="HYD"></property>
+		<property name="state" value="Telengana"></property>
+		<property name="country" value="India"></property>
+
+	</bean>
+
+	<bean id="studentBean" class="beans.Student">
+		<property name="sId" value="S-111"></property>
+		<property name="sName" value="Rohit"></property>
+		<property name="sAddr" ref="addressBean"></property>
+
+	</bean>
+</beans>
