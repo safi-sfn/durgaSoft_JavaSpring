@@ -2,6 +2,7 @@ package beans;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
 public class Student {
@@ -12,6 +13,7 @@ public class Student {
 	private List<String> sQual;
 	private Set<String> sCourses;
 	private Map<String,String> sCourses_And_Faculty;
+	private Properties sCourse_And_Cost;
 	
 	public String getsId() {
 		return sId;
@@ -53,6 +55,12 @@ public class Student {
 		this.sCourses_And_Faculty = sCourses_And_Faculty;
 	}
 	
+	public Properties getsCourse_And_Cost() {
+		return sCourse_And_Cost;
+	}
+	public void setsCourse_And_Cost(Properties sCourse_And_Cost) {
+		this.sCourse_And_Cost = sCourse_And_Cost;
+	}
 	
 	public void showStudentDetails() {
 		System.out.println("Student Detail");
@@ -62,6 +70,7 @@ public class Student {
 		System.out.println("Student Qualification  : "+sQual);		
 		System.out.println("Student Courses        : "+sCourses);
 	    System.out.println("Course and Faculty     : "+sCourses_And_Faculty);
+	    System.out.println("Course and Cost        : "+sCourse_And_Cost);
 		System.out.println();
 		System.out.println("Student Address");
 		System.out.println("--------------------");
