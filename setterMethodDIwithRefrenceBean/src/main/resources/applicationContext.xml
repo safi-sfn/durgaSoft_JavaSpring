@@ -34,5 +34,16 @@
 				<value>Python</value>
 			</set>
 		</property>
+		
+		<property name="sCourses_And_Faculty">
+			<map>
+				<entry key="C" value="Kiran"/>
+				<entry key="C++" value="Naresh"/>
+				<entry key="Java" value="Durga"/>
+				<entry key="Spring" value="Hyder"/>
+			</map>
+		</property>
+		
+		
 	</bean>
 </beans>
