@@ -17,12 +17,22 @@
 		<property name="sId" value="S-111"></property>
 		<property name="sName" value="Rohit"></property>
 		<property name="sAddr" ref="addressBean"></property>
+		  
 		<property name="sQual">
 			<list>
 				<value>BTech</value>
 				<value>MTech</value>
 				<value>PHD</value>
 			</list>
+		</property> 
+	
+		<property name="sCourses">
+			<set>
+				<value>C</value>
+				<value>C++</value>
+				<value>Java</value>
+				<value>Python</value>
+			</set>
 		</property>
 	</bean>
 </beans>
