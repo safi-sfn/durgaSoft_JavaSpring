@@ -44,6 +44,15 @@
 			</map>
 		</property>
 		
+		<property name="sCourse_And_Cost">
+			<props>
+				<prop key="C">1000</prop>
+				<prop key="C++">2000</prop>
+				<prop key="Java">3000</prop>
+				<prop key="Python">4000</prop>
+			</props>		
+		</property>
+		
 		
 	</bean>
 </beans>
