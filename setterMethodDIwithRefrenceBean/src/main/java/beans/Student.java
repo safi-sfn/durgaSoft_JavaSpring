@@ -1,10 +1,13 @@
 package beans;
 
+import java.util.List;
+
 public class Student {
 		
 	private String sId;
 	private String sName;
 	private Address sAddr;
+	private List<String> sQual;
 	
 	public String getsId() {
 		return sId;
@@ -25,11 +28,22 @@ public class Student {
 		this.sAddr = sAddr;
 	}
 	
+	public List<String> getsQual() {
+		return sQual;
+	}
+	public void setsQual(List<String> sQual) {
+		this.sQual = sQual;
+	}
+	
 	public void showStudentDetails() {
 		System.out.println("Student Detail");
 		System.out.println("--------------------");
-		System.out.println("Student ID    : "+sId);
-		System.out.println("Student Name  : "+sName);
+		System.out.println("Student ID             : "+sId);
+		System.out.println("Student Name           : "+sName);
+		System.out.print("Student Qualification  : ");
+		for(String qual:sQual) {
+			System.out.print(qual+" ");
+		}
 		System.out.println();
 		System.out.println("Student Address");
 		System.out.println("--------------------");
