@@ -1,6 +1,7 @@
 package beans;
 
 import java.util.List;
+import java.util.Set;
 
 public class Student {
 		
@@ -8,6 +9,7 @@ public class Student {
 	private String sName;
 	private Address sAddr;
 	private List<String> sQual;
+	private Set<String> sCourses;
 	
 	public String getsId() {
 		return sId;
@@ -35,6 +37,14 @@ public class Student {
 		this.sQual = sQual;
 	}
 	
+	public Set<String> getsCourses() {
+		return sCourses;
+	}
+	public void setsCourses(Set<String> sCourses) {
+		this.sCourses = sCourses;
+	}
+	
+	
 	public void showStudentDetails() {
 		System.out.println("Student Detail");
 		System.out.println("--------------------");
@@ -44,6 +54,12 @@ public class Student {
 		for(String qual:sQual) {
 			System.out.print(qual+" ");
 		}
+		System.out.println();
+		System.out.print("Student Courses        : ");
+		for(String course:sCourses) {
+			System.out.print(course+" ");
+		}
+		System.out.println();
 		System.out.println();
 		System.out.println("Student Address");
 		System.out.println("--------------------");
