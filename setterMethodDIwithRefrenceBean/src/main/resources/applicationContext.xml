@@ -17,6 +17,12 @@
 		<property name="sId" value="S-111"></property>
 		<property name="sName" value="Rohit"></property>
 		<property name="sAddr" ref="addressBean"></property>
-
+		<property name="sQual">
+			<list>
+				<value>BTech</value>
+				<value>MTech</value>
+				<value>PHD</value>
+			</list>
+		</property>
 	</bean>
 </beans>
