@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"> 
+        
+        <context:annotation-config/>
+        
+        <bean id="savingAcc" class="bean.Account">
+        	<property name="accNo" value="abc123"></property>
+        	<property name="accName" value="Saroj"></property>
+        	<property name="accType" value="Savings"></property>
+        </bean>
+        <bean id="currentAcc" class="bean.Account">
+        	<property name="accNo" value="abc123"></property>
+        	<property name="accName" value="Saroj"></property>
+        	<property name="accType" value="Current"></property>
+        </bean>
+        
+        <bean id="employee" class="bean.Employee">
+        	<property name="eId" value="111"></property>
+        	<property name="eName" value="Saroj Gupta"></property>
+        	<property name="eSal" value="25000"></property>
+        </bean>
+        
+
+</beans>
