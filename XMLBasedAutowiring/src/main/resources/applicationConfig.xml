@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+			<bean id="accBean" class="bean.Account">
+				<property name="accId" value="1001"></property>
+				<property name="accName" value="Srinivas"></property>
+				<property name="accType" value="Savings"></property>
+			</bean>      
+			                     
+			<bean id="addrBean" class="bean.Address">
+				<property name="pin" value="124578"></property>
+				<property name="state" value="Telengana"></property>
+				<property name="city" value="Hydrabad"></property>
+			</bean>   
+			                        
+			<!-- <bean id="empBean" class="bean.Employee" autowire="byName">
+				<property name="eId" value="A-111"></property>
+				<property name="eName" value="Srinivas TC"></property>
+				<property name="eSal" value="25000"></property>
+			</bean>  -->  
+			
+			<bean id="empBean" class="bean.Employee" autowire="byType">
+				<property name="eId" value="A-111"></property>
+				<property name="eName" value="Srinivas TC"></property>
+				<property name="eSal" value="25000"></property>
+			</bean>                          
+</beans>
