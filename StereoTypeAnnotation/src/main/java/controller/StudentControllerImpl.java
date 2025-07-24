@@ -1,34 +1,81 @@
 package controller;
 
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import dto.Student;
+import service.StudentServiceImpl;
 
 @Controller("studentController")
-public class StudentControllerImpl implements IStudentController {
+public class StudentControllerImpl implements StudentController {
 
+	Scanner sc = null;
+	
+	@Autowired
+	private StudentServiceImpl studentService;
+	
+	public StudentControllerImpl() {
+		
+		try {
+			sc = new Scanner(System.in);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
-	public String addStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+	public void addStudent() {
+		try {
+			System.out.println("Student ID       : ");
+			String sid = sc.next();
+			System.out.println("Student Name     : ");
+			String sname = sc.next();
+			System.out.println("Student Address  : ");
+			String saddr = sc.next();
+			
+			Student student = new Student();
+			student.setsId(sid);
+			student.setsName(sname);
+			student.setsAddr(saddr);
+			
+			String status = studentService.addStudent(student);
+			
+			if(status.equals("existed")) {
+				System.out.println("Student Existed Already");
+			}
+			if(status.equals("success")) {
+				System.out.println("Student Insertion Success");
+			}
+			if(status.equals("failure")) {
+				System.out.println("Student Insertion Failure");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
 	}
 
 	@Override
-	public Student searchStudent(String sId) {
+	public void searchStudent() {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
-	public String updateStudent(Student student) {
+	public void updateStudent() {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
 
 	@Override
-	public String deleteStudent(String sID) {
+	public void deleteStudent() {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
+
+	
 
 }
