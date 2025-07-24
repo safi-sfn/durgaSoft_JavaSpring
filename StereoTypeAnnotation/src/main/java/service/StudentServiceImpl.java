@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import dto.Student;
 
 @Service("studentService")
-public class StudentServiceImpl implements IStudentService {
+public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public String addStudent(Student student) {
