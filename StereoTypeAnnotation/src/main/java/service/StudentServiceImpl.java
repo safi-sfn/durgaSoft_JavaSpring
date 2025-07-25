@@ -1,16 +1,20 @@
 package service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import dao.IStudentDao;
 import dto.Student;
 
 @Service("studentService")
 public class StudentServiceImpl implements StudentService {
 
+	@Autowired
+	private IStudentDao studentDao;
 	@Override
 	public String addStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+		String status = studentDao.add(student);
+		return status;
 	}
 
 	@Override
