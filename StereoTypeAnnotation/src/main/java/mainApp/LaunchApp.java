@@ -28,6 +28,7 @@ public class LaunchApp {
 				studentController.addStudent();
 				break;
 			case 2:
+				studentController.searchStudent();
 				break;
 			case 3:
 				break;

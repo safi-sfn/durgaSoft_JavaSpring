@@ -19,8 +19,8 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student searchStudent(String sId) {
-		// TODO Auto-generated method stub
-		return null;
+		Student student = studentDao.search(sId);
+		return student;
 	}
 
 	@Override

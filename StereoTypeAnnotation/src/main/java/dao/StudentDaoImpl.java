@@ -14,6 +14,7 @@ import dto.Student;
 @Repository("studentDao")
 public class StudentDaoImpl implements IStudentDao {
 
+	private static final String SQL_QUERY = "SELECT * FROM students WHERE sid = ?";
 	@Autowired
 	private DataSource dataSource;
 	@Override
@@ -48,8 +49,27 @@ public class StudentDaoImpl implements IStudentDao {
 
 	@Override
 	public Student search(String sId) {
-		// TODO Auto-generated method stub
-		return null;
+		Student student = null;
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement prst = connection.prepareStatement(SQL_QUERY);
+			prst.setString(1, sId);
+			ResultSet rs = prst.executeQuery();
+			boolean b = rs.next();
+			if(b==true) {
+				student = new Student();
+				student.setsId(rs.getString("sId"));
+				student.setsName(rs.getString("sName"));
+				student.setsAddr(rs.getString("sAddr"));
+			}else {
+				student = null;
+			
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return student;
 	}
 
 	@Override
