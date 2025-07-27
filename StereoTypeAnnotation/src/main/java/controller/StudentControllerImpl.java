@@ -28,11 +28,11 @@ public class StudentControllerImpl implements StudentController {
 	@Override
 	public void addStudent() {
 		try {
-			System.out.println("Student ID       : ");
+			System.out.print("Student ID       : ");
 			String sid = sc.next();
-			System.out.println("Student Name     : ");
+			System.out.print("Student Name     : ");
 			String sname = sc.next();
-			System.out.println("Student Address  : ");
+			System.out.print("Student Address  : ");
 			String saddr = sc.next();
 			
 			Student student = new Student();
