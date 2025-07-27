@@ -60,7 +60,23 @@ public class StudentControllerImpl implements StudentController {
 
 	@Override
 	public void searchStudent() {
-		// TODO Auto-generated method stub
+		try {
+			System.out.print("Student ID  : ");
+			String sid = sc.next();  //--------------------D
+			Student student = studentService.searchStudent(sid);
+			if(student==null) {
+				System.out.println("Student Not Existed");
+			}else {
+				System.out.println("Student Details");
+				System.out.println("--------------------");
+				System.out.println("Student ID      : "+student.getsId());
+				System.out.println("Student Name    : "+student.getsName());
+				System.out.println("Student Address : "+student.getsAddr());
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 
