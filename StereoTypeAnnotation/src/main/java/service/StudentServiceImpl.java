@@ -11,6 +11,7 @@ public class StudentServiceImpl implements StudentService {
 
 	@Autowired
 	private IStudentDao studentDao;
+
 	@Override
 	public String addStudent(Student student) {
 		String status = studentDao.add(student);
@@ -24,21 +25,16 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public Student getStudent(String sId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public String updateStudent(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+		String status = studentDao.update(student);
+		return status;
 	}
 
 	@Override
 	public String deleteStudent(String sID) {
-		// TODO Auto-generated method stub
-		return null;
+		String status = studentDao.delete(sID);
+		return status;
+
 	}
 
 }
