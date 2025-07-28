@@ -17,6 +17,7 @@ public class StudentDaoImpl implements IStudentDao {
 	private static final String SQL_QUERY = "SELECT * FROM students WHERE sid = ?";
 	@Autowired
 	private DataSource dataSource;
+
 	@Override
 	public String add(Student student) {
 		String status = "";
@@ -26,22 +27,22 @@ public class StudentDaoImpl implements IStudentDao {
 			pst.setString(1, student.getsId());
 			ResultSet rs = pst.executeQuery();
 			boolean b = rs.next();
-			if(b==true) {
-				status="existed";
-			}else {
+			if (b == true) {
+				status = "existed";
+			} else {
 				pst = con.prepareStatement("insert into students values(?,?,?)");
 				pst.setString(1, student.getsId());
 				pst.setString(2, student.getsName());
 				pst.setString(3, student.getsAddr());
 				int rowCount = pst.executeUpdate();
-				if(rowCount==1) {
+				if (rowCount == 1) {
 					status = "success";
-				}else {
+				} else {
 					status = "failure";
 				}
 			}
 		} catch (Exception e) {
-			status="failure";
+			status = "failure";
 			e.printStackTrace();
 		}
 		return status;
@@ -56,16 +57,16 @@ public class StudentDaoImpl implements IStudentDao {
 			prst.setString(1, sId);
 			ResultSet rs = prst.executeQuery();
 			boolean b = rs.next();
-			if(b==true) {
+			if (b == true) {
 				student = new Student();
 				student.setsId(rs.getString("sId"));
 				student.setsName(rs.getString("sName"));
 				student.setsAddr(rs.getString("sAddr"));
-			}else {
+			} else {
 				student = null;
-			
+
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -74,17 +75,55 @@ public class StudentDaoImpl implements IStudentDao {
 
 	@Override
 	public String update(Student student) {
-		// TODO Auto-generated method stub
-		return null;
+		String status = "";
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement prst = connection.prepareStatement("UPDATE students SET sName=?, sAddr=? WHERE sID=?");
+			prst.setString(1, student.getsName());
+			prst.setString(2, student.getsAddr());
+			prst.setString(3, student.getsId());
+			int rowCount = prst.executeUpdate();
+			if (rowCount == 1) {
+				status = "success";
+			} else {
+				status = "failure";
+			}
+
+		} catch (Exception e) {
+			status = "failure";
+			e.printStackTrace();
+		}
+
+		return status;
 	}
 
 	@Override
 	public String delete(String sId) {
-		// TODO Auto-generated method stub
-		return null;
+		String status = "";
+		try {
+			Connection connection = dataSource.getConnection();
+			PreparedStatement prst = connection.prepareStatement("SELECT * FROM students WHERE sId=?");
+			prst.setString(1, sId);
+			ResultSet rs = prst.executeQuery();
+			boolean b = rs.next();
+			if (b == true) {
+				prst = connection.prepareStatement("DELETE FROM students WHERE sId=?");
+				prst.setString(1, sId);
+				int rowCount = prst.executeUpdate();
+				if (rowCount == 1) {
+					status = "success";
+				} else {
+					status = "failure";
+				}
+
+			} else {
+				status = "notexisted";
+			}
+		} catch (Exception e) {
+			status = "failure";
+			e.printStackTrace();
+		}
+		return status;
 	}
-
-	
-
 
 }
