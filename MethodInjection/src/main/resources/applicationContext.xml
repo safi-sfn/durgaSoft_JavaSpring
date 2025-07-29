@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+		<bean id="courseBean" class="beans.Course">
+			<property name="cId" value="A-111"></property>
+			<property name="cName" value="Java"></property>
+			<property name="cCost" value="5000"></property>
+		</bean>
+		
+		<bean id="studentBean" class="beans.Students" scope="prototype">
+			<property name="sId" value="1"></property>
+			<property name="sName" value="Ronak"></property>
+			<property name="sAddr" value="DBG"></property>
+			<property name="course" ref="courseBean"></property>
+		</bean>
+		
+		<!-- scope=prototype means different object for each bean -->
+		<!--  <bean id="studentBean2" class="beans.Students" scope="prototype"> -->
+		<bean id="studentBean2" class="beans.Students">
+			<property name="sId" value="1"></property>
+			<property name="sName" value="Ronak"></property>
+			<property name="sAddr" value="DBG"></property>
+			<property name="course" ref="courseBean"></property>
+		</bean>
+</beans>
