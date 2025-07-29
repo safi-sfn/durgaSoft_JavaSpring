@@ -21,7 +21,7 @@ Repository containing all projects from DurgaSoft Java Spring framework training
 |----|---------|-------------|--------------|
 | 1  | [📦 app01](app01/) | Basic Spring application | `IoC Container`, `BeanFactory` |
 | 2  | [🧬 Bean Inheritance](beanInheritance/) | Bean configuration inheritance | `abstract beans`, `parent/child` |
-| 3  | [⚡ Bean Instantiation](beanInstantiation/) | Different bean creation approaches | `Static Factory`, `Instance Factory` |
+| 3  | [⚡ Bean Instantiation](BeanInstantiation/) | Different bean creation approaches | `Static Factory`, `Instance Factory` |
 
 
 
