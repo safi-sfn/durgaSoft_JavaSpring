@@ -62,6 +62,7 @@ public class Employee {
 		System.out.println("Employee Id     : " + eid);
 		System.out.println("Employee Name   : " + ename);
 		System.out.println("Employee Salary : " + esal);
+		System.out.println("Employee Age    : " + eage);
 		System.out.println("Employee Email  : " + eemail);
 		System.out.println("Employee Mobile : " + emobile);
 	}
