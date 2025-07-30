@@ -5,14 +5,16 @@
                         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 		<bean id="employeeBean" class="beans.Employee">
-			<property name="eid" value=""/>
+			<property name="eid" value="A-111"/>
 			<property name="ename" value="Rohit"/>
 			<property name="esal" value="25000"/>
-			<property name="eage" value="25"/>
+			<property name="eage" value="50"/>
 			<property name="eemail" value=""/>
 			<property name="emobile" value=""/>
 		</bean>
-		<bean id="employeeValidatorBean" class="validator.EmployeeValidator"/>
+		<bean id="employeeValidatorBean" class="validator.EmployeeValidator">
+			<property name="resource" value="errorMessages.properties"></property>
+		</bean>
 
 
-</beans>
+</beans> 
