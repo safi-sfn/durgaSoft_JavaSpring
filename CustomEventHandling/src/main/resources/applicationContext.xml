@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+		<bean id="account" class="bean.Account">
+			<property name="publisher" ref="accountEventPublisher" />
+		</bean>
+		<bean id="accountEventHandler" class="events.AccountEventHandler" />
+		<bean id="accountEventPublisher" class="events.AccountEventPublisher" />
+
+</beans>
